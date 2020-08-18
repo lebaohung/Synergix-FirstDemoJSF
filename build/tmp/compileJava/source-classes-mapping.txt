@@ -1,0 +1,4 @@
+com/synergix/controller/HelloBean.java
+ com.synergix.controller.HelloBean
+com/synergix/service/HelloService.java
+ com.synergix.service.HelloService

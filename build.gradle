@@ -1,0 +1,32 @@
+plugins {
+  id 'java'
+  id 'war'
+}
+
+group 'com.synergix'
+version '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  junitVersion = '5.6.2'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  providedCompile group: 'javax.faces', name: 'javax.faces-api', version: '2.3'
+  implementation('org.glassfish:jakarta.faces:2.3.14')
+  compile group: 'javax.faces', name: 'jsf-impl', version: '1.2_12'
+  providedCompile group: 'javax.faces', name: 'jsf-api', version: '1.2_12'
+
+
+  testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()    }
